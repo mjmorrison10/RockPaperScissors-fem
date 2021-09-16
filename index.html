@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Rock, Paper, Scissors!</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <script src="./js/index.js"></script>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <div class="scoreboard">
+        <div class="title">
+          <img src="./images/logo.svg" alt="" />
+        </div>
+        <div class="score">
+          <p>score</p>
+          <h1>0</h1>
+        </div>
+      </div>
+
+      <div class="hands">
+        <div class="paper-outline" onclick="pickUserHand('paper')">
+          <div class="paper">
+            <img src="./images/icon-paper.svg" alt="" />
+          </div>
+        </div>
+        <div class="scissors-outline" onclick="pickUserHand('scissors')">
+          <div class="scissors">
+            <img src="./images/icon-scissors.svg" alt="" />
+          </div>
+        </div>
+        <div class="rock-outline" onclick="pickUserHand('rock')">
+          <div class="rock">
+            <img src="./images/icon-rock.svg" alt="" />
+          </div>
+        </div>
+      </div>
+
+      <div class="contest">
+        <div class="userHand">
+          <h1>you picked</h1>
+          <div class="handImageContainer">
+
+            <div id="userPickOutline" class="paper-outline">
+              <div class="paper">
+                <img id="userPickImg" src="./images/icon-paper.svg" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="referee">
+          <div class="decision">
+            <h1>you win</h1>
+            <div class="newGame" onclick="restartGame()">
+              play again
+            </div>
+          </div>
+        </div>
+
+        <div class="computerHand">
+          <h1>the house picked</h1>
+          <div class="handImageContainer">
+
+            <div id="computerPickOutline" class="scissors-outline">
+              <div class="scissors">
+                <img id="computerPickImg" src="./images/icon-scissors.svg" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+
+
+
+
+
+
+    </div>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div>
+  </body>
+</html>
